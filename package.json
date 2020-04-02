@@ -1,0 +1,8 @@
+{
+  "name": "prime-typer",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}
