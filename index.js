@@ -18,8 +18,20 @@ class App extends Component {
         <p>
           Start editing to see some magic happen :)
         </p>
+        <canvas id="canvas" width="1024" height="512">
+        <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+        </canvas>
       </div>
     );
+    var canvas  = document.querySelector('#canvas');
+    var context = canvas.getContext('2d');
+    var zozor = new Image();
+    zozor.src = 'zozor.png';
+    zozor.addEventListener('load', function() {
+        var pattern = context.createPattern(zozor, 'repeat');
+        context.fillStyle = pattern;
+        context.fillRect(0, 0, 1024, 512);
+    });
   }
 }
 
